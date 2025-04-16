@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 import xlsxwriter
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS to accept requests from your React app
+CORS(app, origins=["*"])
 
 # --- Existing Grade Report Endpoint ---
 def marks_to_grade_point(total_marks):
